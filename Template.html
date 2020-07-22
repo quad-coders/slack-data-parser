@@ -1,0 +1,90 @@
+<style>
+    body {
+        font-size: 15px;
+        font-family: NotoSansJP, Slack-Lato, appleLogo, sans-serif;
+    }
+
+    .message {
+        margin-bottom: 15px;
+    }
+
+    .message-sender {
+        font-weight: 900;
+        margin-right: 5px;
+    }
+
+    .message-time,
+    .attachment-metadata {
+        color: #616061;
+        font-size: 12px;
+    }
+
+    .message-body {
+        display: inline-block
+    }
+</style>
+
+<body>
+    <div class='message'>
+        <div>
+            <span class='message-sender'>
+                User
+            </span>
+            <span class='message-time'>
+                11 PM
+            </span>
+        </div>
+
+        <!-- No attachement -->
+        <span class='message-body'>
+            test message
+        </span>
+
+        <!-- Attachement is movie -->
+        <div>
+            <span class='attachment-metadata'>
+                file metadata
+            </span>
+            <div>
+                <video controls='controls' width='800' height='600' src='video-source'></video>
+            </div>
+        </div>
+
+        <!-- Attachement is pdf -->
+        <div>
+            <span class='attachment-metadata'>
+                file metadata
+            </span>
+            <div>
+                <a target='_blank' href='link-path'>
+                    Full size PDF
+                </a>
+            </div>
+            <embed type='application/pdf' width='800px' height='600px' src='link-path' />
+        </div>
+
+        <!-- Attachement is picture -->
+        <div>
+            <span class='attachment-metadata'>
+                file metadata
+            </span>
+            <div>
+                <a target='_blank' href='link-path'>
+                    <img src='image-path'>
+                </a>
+            </div>
+        </div>
+
+        <!-- Attachment is other type -->
+        <div>
+            <span class='attachment-metadata'>
+                file metadata
+            </span>
+            <div>
+                <a target='_blank' href='link-path'>
+                    file title
+                </a>
+            </div>
+        </div>
+    </div>
+</body>
