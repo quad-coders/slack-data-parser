@@ -12,7 +12,7 @@
 1. Export data from your Slack organization, see [Slack](https://slack.com/help/articles/201658943-Export-your-workspace-data).
 2. The exported data will look something like this:
 ```
-  Organization name
+  {Organization name}
   - channels.json
   - integration_logs.json
   - users.json
@@ -31,6 +31,7 @@
     - 2020-07-20.json
     - 2020-07-21.json
 ```
+
 7. Open `Program.cs`, add new entry to `Users` object to map available user id with real name, for example:
 ```
   static string[,] Users = {
@@ -40,9 +41,10 @@
 ```
 
 8. On project root, run following CLI commands:
-  - dotnet restore
-  - dotnet build
-  - dotnet run
+  - `dotnet restore`
+  - `dotnet build`
+  - `dotnet run`
+
 9. When finish, the app will generate new folders and files in the **Data** folder.
 ```
   Data
@@ -53,4 +55,5 @@
     - Thumb                 // Contain thumb version of the attachments
     - {channel name}.html   // The html of all conversation categorized by channel name
 ```
+
 10. Open the HTML file with any browser to view conversation for that channel. Click on attachments will open new tab in a browser to show full size of the attachments.
